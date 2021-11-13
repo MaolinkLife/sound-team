@@ -48,7 +48,6 @@
                             ],
                             "optimization": true,
                             "sourceMap": false,
-                            "extractCss": false,
                             "namedChunks": false,
                             "outputHashing": "all",
                             "extractLicenses": true,
@@ -97,11 +96,12 @@
                     }
                 },
                 "test": {
-                    "builder": "@angular-devkit/build-angular:jest:run",
+                    "builder": "@angular-devkit/build-angular:karma",
                     "options": {
                         "main": "src/test.ts",
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.spec.json",
+                        "karmaConfig": "karma.conf.js",
                         "inlineStyleLanguage": "less",
                         "assets": [
                             "src/favicon.ico",
