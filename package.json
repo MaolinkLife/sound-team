@@ -1,13 +1,18 @@
 {
     "name": "sound-team",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve node —openssl-legacy-provider ./node_modules/.bin/gatsby build",
+        "start": "ng serve node",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "build:prod": "ng build --configuration=production"
+        "build:prod": "ng build --configuration production",
+        "build:dev": "ng build --configuration development",
+        "ci": "npm run lint && npm run test",
+        "lint": "ng lint",
+        "clean:dist": "rimraf --dist",
+        "rimraf": "rimraf"
     },
     "private": true,
     "dependencies": {
@@ -19,22 +24,28 @@
         "@angular/platform-browser": "~12.2.0",
         "@angular/platform-browser-dynamic": "~12.2.0",
         "@angular/router": "~12.2.0",
+        "@jest/types": "^27.2.5",
+        "npm": "8.1.3",
+        "resize-observer-polyfill": "^1.5.1",
+        "rimraf": "3.0.2",
         "rxjs": "~6.6.0",
         "tslib": "^2.3.0",
         "zone.js": "~0.11.4"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "~12.2.7",
+        "@angular-builders/jest": "^13.0.0",
+        "@angular-devkit/build-angular": "^13.0.2",
         "@angular/cli": "~12.2.7",
         "@angular/compiler-cli": "~12.2.0",
+        "@ngrx/store": "^12.5.1",
         "@types/jasmine": "~3.8.0",
+        "@types/jest": "^27.0.2",
         "@types/node": "^12.11.1",
+        "eslint": "^8.2.0",
+        "hammerjs": "^2.0.8",
         "jasmine-core": "~3.8.0",
-        "karma": "~6.3.0",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage": "~2.0.3",
-        "karma-jasmine": "~4.0.0",
-        "karma-jasmine-html-reporter": "~1.7.0",
+        "jest": "^27.3.1",
+        "ts-mockito": "^2.6.1",
         "typescript": "~4.3.5"
     }
 }
