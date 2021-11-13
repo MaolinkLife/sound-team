@@ -24,7 +24,7 @@
             true,
             "check-space"
         ],
-        "component-celector": [
+        "component-selector": [
             true,
             "element",
             "app",
@@ -124,7 +124,7 @@
         "no-sparse-": true,
         "no-internal-module": true,
         "no-trailing-whitespace": true,
-        "no-access-mising-member": false,
+        "no-access-missing-member": false,
         "no-collapsible-if": true,
         "no-else-after-return": true,
         "no-return-undefined": true,

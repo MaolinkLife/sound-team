@@ -14,6 +14,15 @@
         "clean:dist": "rimraf --dist",
         "rimraf": "rimraf"
     },
+    "contributors": [
+        {
+            "name": "Maolink",
+            "url": "https://github.com/MaolinkLife"
+        }
+    ],
+    "homepage": "https://coreui.io/angular",
+    "copyright": "Copyright 2018",
+    "license": "MIT",
     "private": true,
     "dependencies": {
         "@angular/animations": "~12.2.0",
