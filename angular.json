@@ -23,6 +23,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
+                        "aot": false,
                         "outputPath": "dist/sound-team",
                         "index": "src/index.html",
                         "main": "src/main.ts",
@@ -36,7 +37,13 @@
                         "styles": [
                             "src/styles.less"
                         ],
-                        "scripts": []
+                        "scripts": [],
+                        "vendorChunk": true,
+                        "extractLicenses": false,
+                        "buildOptimizer": false,
+                        "sourceMap": true,
+                        "optimization": false,
+                        "namedChunks": true
                     },
                     "configurations": {
                         "production": {
@@ -48,7 +55,6 @@
                             ],
                             "optimization": true,
                             "sourceMap": false,
-                            "extractCss": false,
                             "namedChunks": false,
                             "outputHashing": "all",
                             "extractLicenses": true,
@@ -97,7 +103,7 @@
                     }
                 },
                 "test": {
-                    "builder": "@angular-devkit/build-angular:jest:run",
+                    "builder": "@angular-builders/jest:run",
                     "options": {
                         "main": "src/test.ts",
                         "polyfills": "src/polyfills.ts",

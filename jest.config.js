@@ -9,12 +9,12 @@ module.exports = {
             ],
         },
     },
-    testURL: 'http://github.com/@angular-cli-builders',
+    testURL: 'https://github.com/mgechev/cli-builders-demo',
     setupFilesAfterEnv: [`${__dirname}/jest.setup.js`],
     moduleNameMapper: {
         '\\.(jpg|jpeg|png)$': `${__dirname}/mock-module.js`,
         ...pathsToModuleNameMapper(compilerOptions.paths, {
-            prifix: `${__dirname}/`,
+            prefix: `${__dirname}/`,
         }),
         '!raw-loader!(.+)': '$1',
     },
